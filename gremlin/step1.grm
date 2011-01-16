@@ -1,0 +1,7 @@
+
+$pomiary := $_g/V[@typ='miernik']/outE[@rel="mierzy"]
+
+foreach $pomiar in $pomiary
+  $pomiar/inV/@pomiar := $pomiar/outV/@pomiar
+end
+

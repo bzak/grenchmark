@@ -1,0 +1,15 @@
+
+
+
+# znajdź ujęcia
+$ujecia := $_g/V[@typ='ujecie']
+
+# wylicz zużycie 
+foreach $ujecie in $ujecia
+  $glowny := $ujecie/outE[@rel='jest zrodlem']/inV
+  if $glowny/@zuzycie = null
+    $glowny/@zuzycie := 0
+  end
+  $glowny/@zuzycie := $glowny/@zuzycie + $ujecie/@pomiar
+end
+

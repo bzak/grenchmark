@@ -1,0 +1,21 @@
+
+
+# funkcja, która znajduje najbliższy 'wezel-glowny' dla danego wierzchołka
+func ex:znajdzWezelGlowny($vertex)
+    $edge := $vertex/inE[@rel='laczy']
+    if $edge/outV/@typ='wezel-glowny'
+		$result := $edge/outV
+	else 
+		$result := ex:znajdzWezelGlowny($edge/outV)
+	end  
+end
+
+# znajdź ujęcia 
+$ujecia := $_g/V[@typ='ujecie']/inE[@rel="laczy"]/inV
+
+foreach $ujecie in $ujecia
+  $glowny := ex:znajdzWezelGlowny($ujecie)
+  $edge := g:add-e($h, $ujecie, '', $glowny)
+  $edge/@rel := 'jest zrodlem'
+end
+

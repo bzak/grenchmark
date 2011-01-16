@@ -1,0 +1,12 @@
+
+# znajdź ujęcia
+$ujecia := $_g/V[@typ='ujecie']
+
+# wylicz stratê i zu¿ycie na ujeciach
+foreach $ujecie in $ujecia
+  $glowny := $ujecie/outE[@rel='jest zrodlem']/inV
+  $glowny/@strata := -1 * ($glowny/@pomiar + $glowny/@zuzycie)
+  $ujecie/@strata := $ujecie/@pomiar div $glowny/@zuzycie * ($glowny/@strata)
+  $ujecie/@zuzycie := $ujecie/@strata + $ujecie/@pomiar
+end
+

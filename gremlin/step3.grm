@@ -1,0 +1,15 @@
+
+
+# przykładowa funkcja, która szacuje zużycie dla danego węzła wg wzoru:
+# 50 * ilość korzystających osób
+func ex:oszacujZuzycie($ujecie)
+    $korzystajacy := $ujecie/inE[@rel='korzysta']/outV
+    $ujecie/@pomiar := g:count($korzystajacy) * (-50)
+end
+
+# znajdź ujęcia bez pomiaru
+$ujecia := $_g/V[@typ='ujecie' and @pomiar = null]
+
+foreach $ujecie in $ujecia 
+   ex:oszacujZuzycie($ujecie)
+end

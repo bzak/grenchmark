@@ -1,0 +1,13 @@
+
+
+
+# znajdź płatników
+$platnicy := $_g/V[@typ='platnik']
+
+# wylicz opłatę 
+foreach $platnik in $platnicy
+  $ujecia := $platnik/outE[@rel='korzysta']/inV
+  $platnik/@zuzycie := g:sum($ujecia/@zuzycie) 
+  $platnik/@oplata := $platnik/@zuzycie * 4 * (-1)
+end
+

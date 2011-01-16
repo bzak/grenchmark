@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+        http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+
+  <!-- atrybuty relacji -->
+  <key id="od" for="edge" attr.name="od" attr.type="int"/>
+  <key id="do" for="edge" attr.name="do" attr.type="int"/>
+  <key id="rel" for="edge" attr.name="typ" attr.type="string"/>
+
+  <!-- atrybuty węzłów -->
+  <key id="nazwa" for="node" attr.name="nazwa" attr.type="string"/>
+  <key id="opis" for="node" attr.name="opis" attr.type="string"/>
+  <key id="pomiar" for="node" attr.name="pomiar" attr.type="double"/>
+  <key id="typ" for="node" attr.name="typ" attr.type="string"/>
+
+  <!-- graf -->
+  <graph id="G" edgedefault="undirected">
+    <node id="1">
+      <data key="nazwa">O1</data>
+      <data key="typ">platnik</data>
+    </node>
+    <node id="2">
+      <data key="nazwa">L1</data>
+      <data key="typ">miernik</data>
+      <data key="pomiar">-100</data>
+    </node>
+    <node id="3">
+      <data key="nazwa">U1</data>
+      <data key="typ">ujecie</data>
+    </node>
+    <node id="4">
+      <data key="nazwa">X3</data>
+      <data key="typ">wezel</data>
+    </node>
+    <node id="5">
+      <data key="nazwa">U2</data>
+      <data key="typ">ujecie</data>
+    </node>
+    <node id="6">
+      <data key="nazwa">O2</data>
+      <data key="typ">platnik</data>
+    </node>
+    <node id="7">
+      <data key="nazwa">O3</data>
+      <data key="typ">platnik</data>
+    </node>
+    <node id="8">
+      <data key="nazwa">U3</data>
+      <data key="typ">ujecie</data>
+    </node>
+    <node id="9">
+      <data key="nazwa">L3</data>
+      <data key="typ">miernik</data>
+      <data key="pomiar">-200</data>      
+    </node>
+    <node id="10">
+      <data key="nazwa">X2</data>
+      <data key="typ">wezel</data>
+    </node>
+    <node id="11">
+      <data key="nazwa">U4</data>
+      <data key="typ">ujecie</data>
+    </node>
+    <node id="12">
+      <data key="nazwa">O4</data>
+      <data key="typ">platnik</data>
+    </node>
+    <node id="13">
+      <data key="nazwa">L4</data>
+      <data key="typ">miernik</data>
+      <data key="pomiar">-100</data>      
+    </node>
+    <node id="14">
+      <data key="nazwa">X1</data>
+      <data key="typ">wezel</data>
+    </node>
+    <node id="15">
+      <data key="nazwa">U5</data>
+      <data key="typ">ujecie</data>
+    </node>
+    <node id="16">
+      <data key="nazwa">X</data>
+      <data key="typ">wezel-glowny</data>
+    </node>
+    <node id="17">
+      <data key="nazwa">L4</data>
+      <data key="typ">miernik</data>
+      <data key="pomiar">700</data>      
+    </node>
+    
+    <edge id="101" source="1" target="3">
+      <data key="rel">korzysta</data>
+      <data key="od">1</data>
+      <data key="do">30</data>
+    </edge>
+    <edge id="102" source="6" target="5">
+      <data key="rel">korzysta</data>
+      <data key="od">1</data>
+      <data key="do">30</data>
+    </edge>
+    <edge id="103" source="6" target="15">
+      <data key="rel">korzysta</data>
+      <data key="od">1</data>
+      <data key="do">30</data>
+    </edge>
+    <edge id="104" source="7" target="8">
+      <data key="rel">korzysta</data>
+      <data key="od">1</data>
+      <data key="do">30</data>
+    </edge>
+    <edge id="105" source="12" target="11">
+      <data key="rel">korzysta</data>
+      <data key="od">1</data>
+      <data key="do">30</data>
+    </edge>
+    
+    <edge id="201" source="2" target="3">
+      <data key="rel">mierzy</data>
+      <data key="od">1</data>
+      <data key="do">30</data>
+    </edge>
+    <edge id="202" source="13" target="11">
+      <data key="rel">mierzy</data>
+      <data key="od">1</data>
+      <data key="do">30</data>
+    </edge>
+    <edge id="203" source="9" target="8">
+      <data key="rel">mierzy</data>
+      <data key="od">1</data>
+      <data key="do">30</data>
+    </edge>
+    <edge id="204" source="17" target="16">
+      <data key="rel">mierzy</data>
+      <data key="od">1</data>
+      <data key="do">30</data>
+    </edge>
+    
+    
+    <edge id="301" source="4" target="3">
+      <data key="rel">laczy</data>
+      <data key="od">1</data>
+      <data key="do">30</data>
+    </edge>
+    <edge id="302" source="4" target="5">
+      <data key="rel">laczy</data>
+      <data key="od">1</data>
+      <data key="do">30</data>
+    </edge>
+    <edge id="303" source="10" target="8">
+      <data key="rel">laczy</data>
+      <data key="od">1</data>
+      <data key="do">30</data>
+    </edge>
+    <edge id="304" source="10" target="11">
+      <data key="rel">laczy</data>
+      <data key="od">1</data>
+      <data key="do">30</data>
+    </edge>
+    <edge id="305" source="14" target="15">
+      <data key="rel">laczy</data>
+      <data key="od">1</data>
+      <data key="do">30</data>
+    </edge>
+    <edge id="306" source="16" target="14">
+      <data key="rel">laczy</data>
+      <data key="od">1</data>
+      <data key="do">30</data>
+    </edge>
+    <edge id="307" source="14" target="10">
+      <data key="rel">laczy</data>
+      <data key="od">1</data>
+      <data key="do">30</data>
+    </edge>
+    <edge id="308" source="10" target="4">
+      <data key="rel">laczy</data>
+      <data key="od">1</data>
+      <data key="do">30</data>
+    </edge>
+  </graph>
+</graphml>
